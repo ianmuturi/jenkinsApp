@@ -10,7 +10,17 @@
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
+		<repository>
+			<id>myMavenRepo.read</id>
+			<url>https://mymavenrepo.com/repo/YymwbJa3H5S8lUjlTltO/</url>
+		</repository>
     </repositories>
+	<distributionManagement>
+		<repository>
+			<id>myMavenRepo.write</id>
+			<url>https://mymavenrepo.com/repo/YeHsghZ7BblFDUj3buOh/ </url>
+		</repository>
+	</distributionManagement>
 
     <properties>
         <!-- Build properties -->
