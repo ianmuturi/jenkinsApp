@@ -1,0 +1,1 @@
+javaw -jar target/jenkins-app-0.0.1-SNAPSHOT.war
