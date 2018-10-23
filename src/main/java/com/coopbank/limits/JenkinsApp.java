@@ -20,7 +20,7 @@ import java.util.Collection;
 
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
-public class JenkinsApp {
+public class JenkinsApp extends SpringBootServletInitializer{
 
     private static final Logger log = LoggerFactory.getLogger(JenkinsApp.class);
 
@@ -81,5 +81,10 @@ public class JenkinsApp {
             hostAddress,
             env.getProperty("server.port"),
             env.getActiveProfiles());
+    }
+	
+	@Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(JenkinsApp.class);
     }
 }
